@@ -61,8 +61,9 @@ function renderDl (costsToUse, formData) {
   const nodes = costsToUse.map(cost => {
     const dt = stringToElements(`<dt>${cost.desc}</dt>`);
     const dd = stringToElements(`<dd>${kronor(cost.amount)}</dd>`);
+    const dd2 = stringToElements(`<dd>á ${cost.amountPeriod} mnd</dd>`);
 
-    return [dt, dd];
+    return [dt, dd, dd2];
   }).flat().flat();
 
   nodes.forEach(node => dlElement.appendChild(node));
