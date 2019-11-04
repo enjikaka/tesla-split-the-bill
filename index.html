@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spleise reise</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="tesla-logo.svg" alt="Tinder Logo">
+      <h1>Speilse</h1>
+    </header>
+
+    <form>
+      <label>
+        <span>Årstid</span>
+        <select name="season" id="season">
+          <option value="summer">Sommar</option>
+          <option value="winter" selected>Vinter</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Kilometer körda</span>
+        <input type="number" name="km" placeholder="km">
+      </label>
+
+      <label>
+        <span>kWh förbrukat</span>
+        <input type="number" name="kwh" placeholder="kWh">
+      </label>
+
+      <label>
+        <span>Antal personser</span>
+        <input type="number" name="persons" value="2">
+      </label>
+    </form>
+    <br>
+    <br>
+    <details>
+      <summary>
+        <strong>Milkostnader</strong>
+        <span id="trip-miles-cost"></span>
+      </summary>
+
+      <dl id="miles-costs"></dl>
+      <dl class="sum">
+        <dt>Kostnad per mil</dt>
+        <dd id="miles-costs-sum"></dd>
+      </dl>
+    </details>
+    <br>
+    <details>
+      <summary>
+        <strong>Elkostnader</strong>
+        <span id="trip-kwh-cost"></span>
+      </summary>
+
+      <dl id="electricity-costs">
+        <dt>Laddning Supercharger per kWh</dt>
+        <dd>2,43 Nkr</dd>
+        <dt>Laddning i garasje per kWh</dt>
+        <dd>2 Nkr</dd>
+        <dt>Laddning i Arvika per kWh</dt>
+        <dd>2,85 Nkr</dd>
+      </dl>
+      <dl class="sum">
+        <dt>Kostnad per kWh</dt>
+        <dd id="kwh-costs-sum">2,4 Nkr</dd>
+      </dl>
+    </details>
+    <br>
+    <details>
+      <summary>
+        <strong>Övriga kostnader</strong>
+        <span>8,00 Nkr</span>
+      </summary>
+      <dl id="electricity-costs">
+        <dt>Bompenger</dt>
+        <dd>8,00 Nkr</dd>
+      </dl>
+    </details>
+    <br>
+    <br>
+    <footer>
+      Total kostnad: <span id="total-amount"></span><br>
+      kr per person <span id="per-person-amount"></span>
+    </footer>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

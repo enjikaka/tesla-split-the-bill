@@ -1,0 +1,125 @@
+:root {
+  --theme-color: #D73933;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper > header {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper > header img {
+  height: 48px;
+  margin-right: 1.5rem;
+}
+
+.wrapper > header {
+  transform: translateX(-4.5rem);
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.sixteen-nine {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  border-top: 1px solid #aaa;
+  padding-top: 0.5rem;
+}
+
+#name {
+  text-transform: capitalize;
+}
+
+@media (max-width: 973px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  .wrapper > header {
+    display: flex;
+    transform: none;
+    flex-flow: column nowrap;
+  }
+
+  .wrapper > header img {
+    height: 128px;
+    margin: 0;
+  }
+}
+
+a {
+  color: var(--theme-color);
+}
+
+button {
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0.8em 1em;
+  border-radius: 4px;
+  border: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+}
+
+label span {
+  flex: 1;
+}
+
+label select {
+  flex: 1;
+}
+
+dd {
+  text-align: right;
+}
+
+.sum {
+  border-top: 1px solid #eee;
+  padding-top: 1em;
+}
+
+.sum dt {
+  font-weight: bold;;
+}
+
+details summary {
+  display: flex;
+  outline: none;
+}
+
+summary strong,
+summary span {
+  flex: 1;
+}
+
+summary span {
+  text-align: right;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem;
+}
