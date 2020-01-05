@@ -1,7 +1,7 @@
 const milesCosts = [
   {
     desc: "Försäkring",
-    amount: 10452,
+    amount: 14370, // 3 000 mil
     amountPeriod: 12,
   },
   {
@@ -80,7 +80,7 @@ function renderDl (costsToUse, formData) {
   tripMilesCost.textContent = kronor(sum * (km / 10));
 
   const kWhAveragePrice = parseFloat(kwhCostsSum.textContent.replace(',', '.'));
-  tripKwhCost.textContent = kronor(kWhAveragePrice * kwh);
+  tripKwhCost.textContent = kronor(kWhAveragePrice * parseFloat(kwh));
 
   updateTotal(persons);
 }
