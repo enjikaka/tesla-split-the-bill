@@ -62,6 +62,7 @@ function updateTotal (persons) {
   const spans = [...summarySpans];
   const total = spans.reduce((acc, span) => {
     const text = span.textContent.replace(',', '.');
+    console.log(text);
     const float = parseFloat(text);
 
     return acc + float;
