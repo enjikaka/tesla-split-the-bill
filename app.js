@@ -1,6 +1,6 @@
 const milesCosts = [
   {
-    desc: "Försäkring",
+    desc: "Försäkring (1 600 mil)",
     amount: 13270.32, // 1 600 mil
     amountPeriod: 12,
   }
