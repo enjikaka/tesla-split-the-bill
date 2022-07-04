@@ -108,13 +108,14 @@ function calculate (formElement) {
 
 async function loadElpris () {
   const res = await fetch('https://high-ant-34.deno.dev');
-  const json = await res.json();
+  const { snittpris } = await res.json();
 
-  document.querySelector('#elhandel-snitt').value = json.snittpris;
-  kwhCostsSum.value = json.snittpris + 0.74 + 0.45;
+  document.querySelector('#elhandel-snitt').value = snittpris;
+  kwhCostsSum.value = snittpris + 0.74 + 0.45;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   calculate(form);
-  loadElpris();
 });
+
+loadElpris();
