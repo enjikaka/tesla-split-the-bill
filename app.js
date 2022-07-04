@@ -11,6 +11,7 @@ const insuranceKmLimit = 20000;
 const form = document.querySelector('form');
 const kmInput = document.querySelector('input[name="km"]');
 const kwhInput = document.querySelector('input[name="kwh"]');
+const personsInput = document.querySelector('input[name="persons"]');
 const dlElement = document.querySelector('#miles-costs');
 const milesCostsSum = document.querySelector('#miles-costs-sum');
 const kwhCostsSum = document.querySelector('#kwh-costs-sum');
@@ -28,6 +29,7 @@ form.addEventListener('change', e => {
 
 kmInput.addEventListener('input', e => {
   kwhInput.value = (e.target.value / 10) * 1.52;
+  updateTotal(personsInput.value);
 });
 
 const kronor = n => new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(n);
