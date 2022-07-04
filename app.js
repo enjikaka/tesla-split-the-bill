@@ -24,7 +24,7 @@ form.addEventListener('change', e => {
   }
 });
 
-const kronor = n => new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEKs' }).format(n);
+const kronor = n => new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(n);
 
 function renderDl (costsToUse, formData) {
   const { km, kwh, persons } = formData;
