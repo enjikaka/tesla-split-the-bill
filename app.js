@@ -32,7 +32,7 @@ function renderDl (costsToUse, formData) {
   dlElement.innerHTML = null;
 
   const nodes = costsToUse.map(cost => {
-    const dt = stringToElements(`<dt>${cost.desc} (${cost.amount / cost.amountPeriod} kr per mil)</dt>`);
+    const dt = stringToElements(`<dt>${cost.desc} (${cost.amount / 1600} kr per mil)</dt>`);
     const dd = stringToElements(`<dd>${kronor(cost.amount)}</dd>`);
     const dd2 = stringToElements(`<dd>á ${cost.amountPeriod} mnd</dd>`);
 
