@@ -110,8 +110,8 @@ async function loadElpris () {
   const res = await fetch('https://high-ant-34.deno.dev');
   const { snittpris } = await res.json();
 
-  document.querySelector('#elhandel-snitt').innerText = snittpris + ' kr';
-  kwhCostsSum.innerText = (snittpris + 0.74 + 0.45) + ' kr';
+  document.querySelector('#elhandel-snitt').innerText = snittpris.toFixed(2) + ' kr';
+  kwhCostsSum.innerText = (snittpris + 0.74 + 0.45).toFixed(2) + ' kr';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
