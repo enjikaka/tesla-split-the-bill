@@ -116,6 +116,5 @@ async function loadElpris () {
 
 document.addEventListener('DOMContentLoaded', () => {
   calculate(form);
+  loadElpris();
 });
-
-loadElpris();
