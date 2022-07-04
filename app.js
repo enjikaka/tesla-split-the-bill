@@ -27,7 +27,7 @@ form.addEventListener('change', e => {
 });
 
 kmInput.addEventListener('input', e => {
-  kwhInput.value = e.target.value * 1.52;
+  kwhInput.value = (e.target.value / 10) * 1.52;
 });
 
 const kronor = n => new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(n);
