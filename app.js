@@ -1,35 +1,8 @@
 const milesCosts = [
   {
     desc: "Försäkring",
-    amount: 14370, // 3 000 mil
+    amount: 13270.32, // 1 600 mil
     amountPeriod: 12,
-  },
-  {
-    desc: 'Låneräntor',
-    amount: 800,
-    amountPeriod: 12,
-  },
-  {
-    desc: 'Däckhotell',
-    amount: 1300,
-    amountPeriod: 6,
-  },
-  {
-    desc: 'Piggdekksoblat',
-    amount: 1400,
-    condition: 'winter',
-    amountPeriod: 6,
-  },
-  {
-    desc: 'Garage',
-    amount: 1200,
-    condition: 'winter',
-    amountPeriod: 6,
-  },
-  {
-    desc: 'Biltvätt',
-    amount: 130,
-    amountPeriod: 1,
   }
 ];
 
