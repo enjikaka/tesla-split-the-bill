@@ -24,7 +24,7 @@ form.addEventListener('change', e => {
   }
 });
 
-const kronor = n => new Intl.NumberFormat('no-NB', { style: 'currency', currency: 'NOK' }).format(n);
+const kronor = n => new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEKs' }).format(n);
 
 function renderDl (costsToUse, formData) {
   const { km, kwh, persons } = formData;
@@ -34,7 +34,7 @@ function renderDl (costsToUse, formData) {
   const nodes = costsToUse.map(cost => {
     const dt = stringToElements(`<dt>${cost.desc}</dt>`);
     const dd = stringToElements(`<dd>${kronor(cost.amount)}</dd>`);
-    const dd2 = stringToElements(`<dd>á ${cost.amountPeriod} mnd</dd>`);
+    const dd2 = stringToElements(`<dd>á ${cost.amountPeriod} mnd<br>${cost.amount / cost.amountPeriod} per mil</dd>`);
 
     return [dt, dd, dd2];
   }).flat().flat();
@@ -88,11 +88,9 @@ function calculate (formElement) {
     }, {});
 
     const costRegardlessOfCondition = milesCosts.filter(cost => cost.condition === undefined);
-    const costsRelatedToSeason = milesCosts.filter(cost => cost.condition === formData.season);
 
     const costsToUse = [
       ...costRegardlessOfCondition,
-      ...costsRelatedToSeason,
     ];
 
     renderDl(costsToUse, formData);
